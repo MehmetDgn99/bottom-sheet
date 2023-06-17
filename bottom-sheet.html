@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bottom-sheet.css">
+    <script src="bottom-sheet.js"></script>
+</head>
+<body>
+<style>
+    body,html{
+        font-family: 'SF Pro Text';
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .mata-bottomsheet {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+
+    .mata-bottomsheet li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mata-bottomsheet li span{
+        border: 1px solid green;
+        padding: 20px;
+        width: 50%;
+        border-radius: 12px;
+        text-align: center;
+    }
+</style>
+<ul class="mata-bottomsheet">
+    <li class="open" onclick="bottomSheetDemo.open()">
+        <span>
+            Open
+        </span>
+    </li>
+    <li class="close" onclick="bottomSheetDemo.close()">
+        <span>
+            Close
+        </span>
+    </li>
+    <li class="create" onclick="bottomSheetDemo.create()">
+        <span>
+            Create
+        </span>
+    </li>
+    <li class="remove" onclick="bottomSheetDemo.remove()">
+        <span>
+            Remove
+        </span>
+    </li>
+</ul>
+<ul class="mata-bottomsheet">
+    <li class="open" onclick="bottomSheetDemo2.open()">
+        <span>
+            Open 2
+        </span>
+    </li>
+    <li class="close" onclick="bottomSheetDemo2.close()">
+        <span>
+            Close 2
+        </span>
+    </li>
+    <li class="create" onclick="bottomSheetDemo2.create()">
+        <span>
+            Create 2
+        </span>
+    </li>
+    <li class="remove" onclick="bottomSheetDemo2.remove()">
+        <span>
+            Remove 2
+        </span>
+    </li>
+</ul>
+
+
+<script>
+    // bottomsheet data to be inserted
+    let bottomsheetData = `<div><h2>MataBT</h2></div>`
+    let bottomsheetData2 = `<div><h2>MataBT 2</h2></div>`
+
+    // create Bottom Sheet
+    var bottomSheetDemo = new Mata_BottomSheet(bottomsheetData,'profil');
+    bottomSheetDemo.create()
+
+    var bottomSheetDemo2 = new Mata_BottomSheet(bottomsheetData2,'kategori');
+    bottomSheetDemo2.create()
+</script>
+</body>
+</html>
