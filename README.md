@@ -20,6 +20,5 @@ Bottom sheet, implemented in pure HTML, CSS, and JavaScript
     //Command
      BottomSheet.open();
      BottomSheet.close();
-     BottomSheet.toggle();
 ```
 
